@@ -1,9 +1,11 @@
 package br.com.alura.alugames.modelo
 
+import java.text.DecimalFormat
+import java.text.DecimalFormatSymbols
 import java.util.*
 import kotlin.random.Random
 
-data class Gamer(var nome:String, var email:String) {
+data class Gamer(var nome:String, var email:String):Recomendavel {
     var dataNascimento:String? = null
     var usuario:String? = null
         set(value) {
@@ -14,8 +16,32 @@ data class Gamer(var nome:String, var email:String) {
         }
     var idInterno:String? = null
         private set
-
+    var plano:Plano = PlanoAvulso("BRONZE")
     val jogosBuscados = mutableListOf<Jogo>()
+    val jogosAlugados = mutableListOf<Aluguel>()
+    val jogosRecomendados = mutableListOf<Jogo>()
+    private val listaNotas = mutableListOf<Int>()
+
+    fun Double.formatoComDuasCasasDecimais(): Double {
+        val decimalFormat = DecimalFormat("#.00", DecimalFormatSymbols(Locale.US))
+        return decimalFormat.format(this).toDouble()
+    }
+
+    override val media: Double
+        get() = listaNotas.average().formatoComDuasCasasDecimais()
+
+    override fun recomendar(nota: Int) {
+        if (nota < 1 || nota > 10) {
+            println("Nota inválida. Insira uma nota entre 1 e 10")
+        } else {
+            listaNotas.add(nota)
+        }
+    }
+
+    fun recomendarJogo(jogo:Jogo, nota:Int) {
+        jogo.recomendar(nota)
+        jogosRecomendados.add(jogo)
+    }
 
     constructor(nome:String, email:String, dataNascimento:String, usuario:String):
         this(nome, email) {
@@ -32,7 +58,12 @@ data class Gamer(var nome:String, var email:String) {
     }
 
     override fun toString(): String {
-        return "Gamer(nome='$nome', email='$email', dataNascimento=$dataNascimento, usuario=$usuario, idInterno=$idInterno)"
+        return "Nome: '$nome'\n" +
+                "E-mail: '$email'\n" +
+                "Data de nascimento: $dataNascimento\n" +
+                "Usuário: $usuario\n" +
+                "ID interno: $idInterno\n" +
+                "Reputação: $media"
     }
 
     fun criarIdInterno() {
@@ -50,6 +81,20 @@ data class Gamer(var nome:String, var email:String) {
             throw IllegalArgumentException("Email inválido")
         }
 
+    }
+
+    fun alugaJogo(jogo:Jogo, periodo: Periodo): Aluguel {
+        val aluguel = Aluguel(jogo, this, periodo)
+
+        jogosAlugados.add(aluguel)
+
+        return aluguel
+    }
+
+    fun jogosDoMes(mes:Int): List<Jogo> {
+        return jogosAlugados
+            .filter { aluguel ->  aluguel.periodo.dataInicial.monthValue == mes}
+            .map { aluguel ->  aluguel.jogo}
     }
 
     companion object {
