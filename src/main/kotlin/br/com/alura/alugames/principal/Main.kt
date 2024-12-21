@@ -20,7 +20,7 @@ fun main() {
         val informacaoJogo = buscaApi.buscaJogo(busca)
 
         if (informacaoJogo != null) {
-            val meuJogo = Jogo(informacaoJogo?.info?.title, informacaoJogo?.info?.thumb)
+            val meuJogo = Jogo(informacaoJogo.info.title, informacaoJogo.info.thumb)
             println("Deseja inserir uma descrição no jogo? S/N")
             val resposta = leitura.nextLine()
             if (resposta.equals("s", true)) {

@@ -5,11 +5,12 @@ import java.math.BigDecimal
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import java.util.*
+import javax.persistence.*
 
-data class Jogo(@Expose val titulo:String?, @Expose val capa: String?):Recomendavel {
+data class Jogo(@Expose val titulo:String, @Expose val capa: String):Recomendavel {
     var preco = BigDecimal("0.0")
     var descricao:String? = null
-
+    var id = 0
     private val listaNotas = mutableListOf<Int>()
 
     fun Double.formatoComDuasCasasDecimais(): Double {
@@ -28,19 +29,20 @@ data class Jogo(@Expose val titulo:String?, @Expose val capa: String?):Recomenda
         }
     }
 
-
-    constructor(titulo: String?, capa: String?, preco:BigDecimal?, descricao:String?):
+    constructor(titulo: String, capa: String, preco:BigDecimal?, descricao:String?, id:Int = 0):
             this(titulo, capa) {
                 this.preco = preco!!
                 this.descricao = descricao
+                this.id = id
             }
 
     override fun toString(): String {
-        return "Meu jogo: \n" +
+        return "\nMeu jogo: \n" +
                 "Título: $titulo\n" +
                 "Capa: $capa \n" +
                 "Preço: $preco \n" +
                 "Descrição: $descricao\n" +
-                "Reputação: $media"
+                "Reputação: $media\n" +
+                "ID: $id"
     }
 }

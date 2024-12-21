@@ -16,6 +16,7 @@ data class Gamer(var nome:String, var email:String):Recomendavel {
         }
     var idInterno:String? = null
         private set
+    var id = 0
     var plano:Plano = PlanoAvulso("BRONZE")
     val jogosBuscados = mutableListOf<Jogo>()
     val jogosAlugados = mutableListOf<Aluguel>()
@@ -43,10 +44,11 @@ data class Gamer(var nome:String, var email:String):Recomendavel {
         jogosRecomendados.add(jogo)
     }
 
-    constructor(nome:String, email:String, dataNascimento:String, usuario:String):
+    constructor(nome:String, email:String, dataNascimento:String?, usuario: String?, id:Int = 0):
         this(nome, email) {
             this.dataNascimento = dataNascimento
             this.usuario = usuario
+            this.id = id
         criarIdInterno()
         }
 
@@ -58,12 +60,14 @@ data class Gamer(var nome:String, var email:String):Recomendavel {
     }
 
     override fun toString(): String {
-        return "Nome: '$nome'\n" +
+        return "\nNome: '$nome'\n" +
                 "E-mail: '$email'\n" +
                 "Data de nascimento: $dataNascimento\n" +
                 "Usuário: $usuario\n" +
                 "ID interno: $idInterno\n" +
-                "Reputação: $media"
+                "Reputação: $media\n" +
+                "ID: $id\n" +
+                "Plano: ${plano.tipo}"
     }
 
     fun criarIdInterno() {

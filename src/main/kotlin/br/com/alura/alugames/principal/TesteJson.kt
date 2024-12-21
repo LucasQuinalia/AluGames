@@ -5,7 +5,7 @@ import br.com.alura.alugames.modelo.PlanoAssinatura
 import br.com.alura.alugames.servicos.ConsumoApi
 import com.google.gson.GsonBuilder
 import java.io.File
-import java.io.FileWriter
+import java.math.BigDecimal
 import java.time.LocalDate
 
 fun main() {
@@ -35,7 +35,7 @@ fun main() {
 //    println(gamer1.jogosDoMes(12))
 
     val gamer2 = listaGamers.get(5)
-    gamer2.plano = PlanoAssinatura("PRATA", 9.90, 3, 0.15)
+    gamer2.plano = PlanoAssinatura("PRATA", BigDecimal("9.90"), 3, BigDecimal("0.15"))
 
     gamer2.alugaJogo(jogo1, periodo1)
     gamer2.alugaJogo(jogo2, periodo2)
