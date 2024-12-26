@@ -7,6 +7,7 @@ data class Aluguel(
     val gamer:Gamer,
     val periodo: Periodo) {
 
+    var id = 0
     val valorDoAluguel:BigDecimal = gamer.plano.obterValor(this)
     
     override fun toString(): String {

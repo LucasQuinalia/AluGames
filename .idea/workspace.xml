@@ -4,30 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8846b35-1f67-4a31-9b4a-7b62ad559fa7" name="Changes" comment="final commit">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/Banco.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/DAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/GamerEntity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/GamersDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/JogoEntity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/JogosDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/PlanoEntity.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/PlanosDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/principal/TesteBanco.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/principal/TesteGamerBanco.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/principal/TestePlanoBanco.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/utilitario/PlanoExtension.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+    <list default="true" id="c8846b35-1f67-4a31-9b4a-7b62ad559fa7" name="Changes" comment="Database implementation">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/AluguelDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/AluguelEntity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/principal/TesteAluguelBanco.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/GamersDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/GamersDAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/JogosDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/dados/JogosDAO.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/Aluguel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/Aluguel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/Gamer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/Gamer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/Jogo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/Jogo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/Plano.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/Plano.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/PlanoAssinatura.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/PlanoAssinatura.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/PlanoAvulso.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/PlanoAvulso.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/principal/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/principal/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/principal/TesteJson.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/principal/TesteJson.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/Periodo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/modelo/Periodo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/utilitario/GamerExtension.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/utilitario/GamerExtension.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/utilitario/JogoExtension.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/br/com/alura/alugames/utilitario/JogoExtension.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,8 +27,8 @@
         <option value="Kotlin Data Class" />
         <option value="Kotlin Interface" />
         <option value="Kotlin Object" />
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -66,6 +52,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Kotlin.MainKt.executor": "Run",
+    "Kotlin.TesteAluguelBancoKt.executor": "Run",
     "Kotlin.TesteBancoKt.executor": "Run",
     "Kotlin.TesteConsumoApiGamerKt.executor": "Run",
     "Kotlin.TesteGamerBancoKt.executor": "Run",
@@ -134,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734391656784</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Database implementation">
+      <option name="closed" value="true" />
+      <created>1734781711136</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1734781711136</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +148,7 @@
     <MESSAGE value="gamer profile implementation" />
     <MESSAGE value="gamer age and games list manipulation implementation" />
     <MESSAGE value="final commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="final commit" />
+    <MESSAGE value="Database implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Database implementation" />
   </component>
 </project>
